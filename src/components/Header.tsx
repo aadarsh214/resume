@@ -36,11 +36,11 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 py-3 sm:py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-        <div className="text-xs sm:text-sm font-mono text-zinc-300">Asia/Kolkata</div>
+    <header className="sm:fixed sm:top-0 sm:left-0 sm:right-0 z-50 px-3 sm:px-4 py-3 sm:py-4">
+      <div className="flex max-w-7xl mx-auto items-center justify-between gap-3">
+        <div className="hidden sm:block text-xs sm:text-sm font-mono text-zinc-300">Asia/Kolkata</div>
 
-        <nav className="flex items-center gap-1 rounded-full px-1.5 sm:px-2 py-1.5 sm:py-2 backdrop-blur-md overflow-x-auto whitespace-nowrap scrollbar-none max-w-[75vw] sm:max-w-none border border-white/10 bg-black/30">
+        <nav className="flex items-center gap-1 rounded-full px-2 py-2 backdrop-blur-md border border-white/10 bg-black/30 mx-auto sm:mx-0 overflow-x-auto whitespace-nowrap scrollbar-none">
           {navItems.map((item, index) => (
             <button
               key={index}
@@ -61,8 +61,7 @@ export default function Header() {
             </button>
           ))}
         </nav>
-
-        <div className="text-xs sm:text-sm font-mono text-zinc-300">{now}</div>
+        <div className="hidden sm:block text-xs sm:text-sm font-mono text-zinc-300">{now}</div>
       </div>
     </header>
   );

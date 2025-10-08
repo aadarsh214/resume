@@ -81,10 +81,10 @@ export default function CursorAura() {
         ref={auraRef}
         className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 transition-opacity duration-300 will-change-transform"
         style={{
-          width: '460px',
-          height: '460px',
-          background: 'radial-gradient(35% 35% at 50% 50%, rgba(122,165,255,0.55) 0%, rgba(108,98,255,0.45) 35%, rgba(122,0,255,0.40) 60%, rgba(0,0,0,0) 72%)',
-          filter: 'blur(32px) saturate(135%)',
+          width: '640px',
+          height: '640px',
+          background: 'radial-gradient(35% 35% at 50% 50%, rgba(122,165,255,0.38) 0%, rgba(108,98,255,0.32) 35%, rgba(122,0,255,0.28) 60%, rgba(0,0,0,0) 74%)',
+          filter: 'blur(40px) saturate(120%)',
           mixBlendMode: 'screen',
         }}
       />
@@ -94,10 +94,10 @@ export default function CursorAura() {
         ref={dotRef}
         className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 transition-opacity duration-300 will-change-transform"
         style={{
-          width: '10px',
-          height: '10px',
+          width: '12px',
+          height: '12px',
           background: 'linear-gradient(90deg, #7aa5ff, #6c62ff, #7a00ff)',
-          boxShadow: '0 0 14px rgba(122,165,255,0.75), 0 0 28px rgba(122,0,255,0.6)',
+          boxShadow: '0 0 10px rgba(122,165,255,0.55), 0 0 18px rgba(122,0,255,0.4)',
         }}
       />
     </div>
