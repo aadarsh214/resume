@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+/* Custom font utility: Clash Display Medium 500 */
+.font-clash-medium {
+  font-family: __clashDisplayMedium_df3e8d, __clashDisplayMedium_Fallback_df3e8d, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Premium subtitle style per spec */
+.subtitle-premium {
+  color: rgb(159, 169, 161);
+  font-size: 32px; /* 32px */
+  line-height: 35px; /* 35px */
+}
+
+/* Optional: responsive downscale on small screens */
+@media (max-width: 640px) {
+  .subtitle-premium { font-size: 22px; line-height: 26px; }
+}
+
+/* Hide scrollbars (used for mobile nav) */
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Animated blue border + liquid hover utilities */
+.animated-border {
+  position: relative;
+  border-radius: 9999px;
+  background: rgba(8, 16, 32, 0.6);
+}
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #7aa5ff, #6c62ff, #7a00ff, #7aa5ff);
+  background-size: 300% 100%;
+  animation: move-border 4s linear infinite;
+  z-index: -1;
+  filter: drop-shadow(0 0 10px rgba(122,165,255,0.35));
+}
+.liquid-hover { position: relative; overflow: hidden; }
+.liquid-hover::after {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(40% 40% at 30% 30%, rgba(122,165,255,0.18), rgba(108,98,255,0.12), rgba(0,0,0,0) 60%);
+  transform: translateX(-40%);
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1), opacity 400ms ease;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.liquid-hover:hover::after { transform: translateX(40%); opacity: 0.9; }
+
+@keyframes move-border {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}

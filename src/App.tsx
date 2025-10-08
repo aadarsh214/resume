@@ -1,34 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header'
+import About from './components/About'
+import Work from './components/Work'
+import SkillWall from './components/SkillWall'
+import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import CursorAura from './components/CursorAura'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="min-h-screen text-zinc-200 bg-[radial-gradient(1200px_600px_at_50%_-10%,#1a0b2e,transparent_60%),linear-gradient(#000,#000)]">
+      <Header />
+      <CursorAura />
+      <main>
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/skill-wall" element={<SkillWall />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   )
 }
 
