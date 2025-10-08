@@ -7,15 +7,24 @@ export default function CursorAura() {
   const target = useRef({ x: 0, y: 0 });
   const current = useRef({ x: 0, y: 0 });
 
-  const isPointerFine = useMemo(() => typeof window !== 'undefined' && matchMedia('(pointer: fine)').matches, []);
+  const pointerType: 'fine' | 'coarse' = useMemo(() => {
+    if (typeof window === 'undefined') return 'fine';
+    return matchMedia('(pointer: fine)').matches ? 'fine' : 'coarse';
+  }, []);
 
   useEffect(() => {
-    if (!isPointerFine) return;
-
-    const onMove = (e: MouseEvent) => {
+    const onMouseMove = (e: MouseEvent) => {
       target.current.x = e.clientX;
       target.current.y = e.clientY;
-      // Ensure visible on first move
+      if (auraRef.current) auraRef.current.style.opacity = '1';
+      if (dotRef.current) dotRef.current.style.opacity = '1';
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      const t = e.touches[0];
+      if (!t) return;
+      target.current.x = t.clientX;
+      target.current.y = t.clientY;
       if (auraRef.current) auraRef.current.style.opacity = '1';
       if (dotRef.current) dotRef.current.style.opacity = '1';
     };
@@ -42,7 +51,18 @@ export default function CursorAura() {
       rafRef.current = requestAnimationFrame(animate);
     };
 
-    window.addEventListener('mousemove', onMove, { passive: true });
+    if (pointerType === 'fine') {
+      window.addEventListener('mousemove', onMouseMove, { passive: true });
+    } else {
+      window.addEventListener('touchmove', onTouchMove, { passive: true });
+      // Initialize position near center on mobile
+      target.current.x = window.innerWidth / 2;
+      target.current.y = window.innerHeight / 2;
+      current.current.x = target.current.x;
+      current.current.y = target.current.y;
+      if (auraRef.current) auraRef.current.style.opacity = '1';
+      if (dotRef.current) dotRef.current.style.opacity = '1';
+    }
     // Initialize at screen center once before starting the loop
     target.current.x = window.innerWidth / 2;
     target.current.y = window.innerHeight / 2;
@@ -53,7 +73,6 @@ export default function CursorAura() {
     rafRef.current = requestAnimationFrame(animate);
 
     const onLeave = () => {
-      // Fade out nicely when leaving viewport
       if (auraRef.current) auraRef.current.style.opacity = '0';
       if (dotRef.current) dotRef.current.style.opacity = '0';
     };
@@ -61,18 +80,22 @@ export default function CursorAura() {
       if (auraRef.current) auraRef.current.style.opacity = '1';
       if (dotRef.current) dotRef.current.style.opacity = '1';
     };
-    window.addEventListener('mouseleave', onLeave);
-    window.addEventListener('mouseenter', onEnter);
+    if (pointerType === 'fine') {
+      window.addEventListener('mouseleave', onLeave);
+      window.addEventListener('mouseenter', onEnter);
+    }
 
     return () => {
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mouseleave', onLeave);
-      window.removeEventListener('mouseenter', onEnter);
+      if (pointerType === 'fine') {
+        window.removeEventListener('mousemove', onMouseMove);
+        window.removeEventListener('mouseleave', onLeave);
+        window.removeEventListener('mouseenter', onEnter);
+      } else {
+        window.removeEventListener('touchmove', onTouchMove);
+      }
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [isPointerFine]);
-
-  if (!isPointerFine) return null;
+  }, [pointerType]);
 
   return (
     <div className="pointer-events-none fixed inset-0 z-40">

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Home, User, Grid3x3, Image } from 'lucide-react';
+import { Home, Grid3x3, Image } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Header() {
@@ -25,7 +25,6 @@ export default function Header() {
 
   const navItems = [
     { icon: Home, label: '', path: '/' },
-    { icon: User, label: 'About', path: '/about' },
     { icon: Grid3x3, label: 'Work', path: '/work' },
     { icon: Image, label: 'Skill Wall', path: '/skill-wall' },
   ];
@@ -61,7 +60,17 @@ export default function Header() {
             </button>
           ))}
         </nav>
-        <div className="hidden sm:block text-xs sm:text-sm font-mono text-zinc-300">{now}</div>
+        <div className="hidden sm:flex items-center gap-3">
+          <a
+            href="https://cal.com/aadarsh-gupta"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs sm:text-sm text-white hover:border-white/30 hover:bg-white/15 transition-colors"
+          >
+            Book a call
+          </a>
+          <span className="text-xs sm:text-sm font-mono text-zinc-300">{now}</span>
+        </div>
       </div>
     </header>
   );

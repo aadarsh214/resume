@@ -1,5 +1,6 @@
-import { experience, personal, socials } from '../data/content';
+import { experience, personal } from '../data/content';
 import ProjectsCarousel from './ProjectsCarousel';
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 
 function ExternalIcon() {
   return (
@@ -11,43 +12,36 @@ function ExternalIcon() {
   );
 }
 
-function SocialLink({ label, href }: { label: string; href: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center gap-2 text-zinc-300 hover:text-white transition-colors"
-    >
-      <span>{label}</span>
-      <ExternalIcon />
-    </a>
-  );
-}
-
+// socials removed; SocialLink component no longer needed
 export default function About() {
   return (
-    <section className="pt-24 pb-16">
+    <section className="pt-16 sm:pt-24 lg:pt-32 xl:pt-36 pb-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mb-6">
-
+        <div className="mb-6 text-center">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white leading-[0.95]">
+            <span className="block">{personal.name.split(' ')[0]}</span>
+            <span className="block">{personal.name.split(' ').slice(1).join(' ')}</span>
+          </h1>
+          <div className="mt-4 md:mt-5 lg:mt-8 inline-block rounded-xl border border-white/20 bg-white/10 px-3 py-2 backdrop-blur-sm mx-auto">
+            <ContainerTextFlip
+              words={["Fullstack Developer", "Prompt Engineer", "AI Automation Engineer"]}
+              className="subtitle-premium font-clash-medium"
+              interval={2500}
+            />
+          </div>
         </div>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white">
-          {personal.name}
-        </h1>
-        <p className="mt-4 subtitle-premium font-clash-medium">{personal.title}</p>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="text-zinc-300 leading-relaxed">
-              {personal.intro}
-            </p>
-            {/* Mini experiences on left */}
+            <p className="text-zinc-300 leading-relaxed">{personal.intro}</p>
             <div className="mt-6 space-y-4">
               {experience
                 .filter((e) => e.company === 'Hitkarini Sabha Trust' || e.company.startsWith('Outlier'))
                 .map((item) => (
-                  <div key={item.company + item.role} className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/20 p-4">
+                  <div
+                    key={item.company + item.role}
+                    className="flex items-start gap-3 rounded-xl border border-white/10 bg-black/20 p-4 hover:border-white/25 transition-colors"
+                  >
                     <img
                       src={item.logo}
                       alt={`${item.company} logo`}
@@ -55,9 +49,7 @@ export default function About() {
                       loading="lazy"
                     />
                     <div>
-                      <h3 className="text-white text-sm font-semibold leading-tight">
-                        {item.role}
-                      </h3>
+                      <h3 className="text-white text-sm font-semibold leading-tight">{item.role}</h3>
                       <p className="text-xs text-zinc-400">{item.company} · {item.period}</p>
                       {item.site ? (
                         <a
@@ -82,6 +74,7 @@ export default function About() {
                 ))}
             </div>
           </div>
+
           <div>
             <div className="flex items-center justify-between">
               <h2 className="text-white font-semibold text-lg">Work Experience</h2>
@@ -99,64 +92,58 @@ export default function About() {
               {experience
                 .filter((e) => !(e.company === 'Hitkarini Sabha Trust' || e.company.startsWith('Outlier')))
                 .map((item) => (
-                <li
-                  key={item.role + item.company}
-                  className="group border border-white/10 rounded-xl p-4 bg-black/20 hover:bg-white/5 hover:border-white/25 transition-colors"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={item.logo}
-                        alt={`${item.company} logo`}
-                        className="h-10 w-10 rounded-lg object-contain bg-white/5 border border-white/10"
-                        loading="lazy"
-                      />
-                      <div>
-                        <h3 className="text-white font-semibold leading-tight">
-                          {item.role} <span className="text-zinc-400">| {item.company}</span>
-                        </h3>
-                        <span className="text-xs text-zinc-400">{item.period}</span>
-                        {item.site ? (
-                          <div>
-                            <a
-                              href={item.site}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="mt-1 inline-flex items-center gap-1 text-[11px] text-zinc-300 hover:text-white"
-                            >
-                              <span>{new URL(item.site).hostname}</span>
-                              <ExternalIcon />
-                            </a>
-                          </div>
-                        ) : null}
+                  <li
+                    key={item.role + item.company}
+                    className="group border border-white/10 rounded-xl p-4 bg-black/20 hover:border-white/25 transition-colors"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={item.logo}
+                          alt={`${item.company} logo`}
+                          className="h-10 w-10 rounded-lg object-contain bg-white/5 border border-white/10"
+                          loading="lazy"
+                        />
+                        <div>
+                          <h3 className="text-white font-semibold leading-tight">
+                            {item.role} <span className="text-zinc-400">| {item.company}</span>
+                          </h3>
+                          <span className="text-xs text-zinc-400">{item.period}</span>
+                          {item.site ? (
+                            <div>
+                              <a
+                                href={item.site}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="mt-1 inline-flex items-center gap-1 text-[11px] text-zinc-300 hover:text-white"
+                              >
+                                <span>{new URL(item.site).hostname}</span>
+                                <ExternalIcon />
+                              </a>
+                            </div>
+                          ) : null}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  {item.bullets?.length ? (
-                    <ul className="mt-3 space-y-2 list-disc list-inside text-sm text-zinc-300">
-                      {item.bullets.map((b, i) => (
-                        <li key={i}>{b}</li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </li>
-              ))}
+                    {item.bullets?.length ? (
+                      <ul className="mt-3 space-y-2 list-disc list-inside text-sm text-zinc-300">
+                        {item.bullets.map((b, i) => (
+                          <li key={i}>{b}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </li>
+                ))}
             </ol>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-6">
-          {socials.map((s) => (
-            <SocialLink key={s.label} {...s} />
-          ))}
-        </div>
+        {/* Socials removed as requested */}
 
-        {/* Projects carousel section */}
         <div className="mt-8">
           <ProjectsCarousel />
         </div>
       </div>
     </section>
-  );
-}
+)}  
 

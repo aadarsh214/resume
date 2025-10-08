@@ -9,6 +9,7 @@ export type Experience = {
   site?: string; // optional website or app domain
 };
 export type Project = { title: string; description: string; url: string; tech: string[] };
+export type ToolLogo = { label: string; src: string };
 
 export const personal = {
   name: 'Aadarsh Gupta',
@@ -130,3 +131,22 @@ export const skillDescriptions = {
   devops:
     'Automating deploys and infra with Docker/Kubernetes, CI/CD pipelines, and cloud-native best practices for robust operations.',
 };
+
+// Logos for tools/platforms shown in Skill Wall (exclude Linux as requested)
+export const toolsLogos: ToolLogo[] = [
+  { label: 'GitHub', src: '/assets/tools/github.svg' },
+  { label: 'Cursor', src: '/assets/tools/cursor.svg' },
+  { label: 'VS Code', src: '/assets/tools/vscode.svg' },
+  { label: 'Postman', src: '/assets/tools/postman.svg' },
+  { label: 'Next.js', src: '/assets/tools/nextjs.svg' },
+  { label: 'GenAI', src: '/assets/tools/genai.svg' },
+  { label: 'MERN', src: '/assets/tools/mern.svg' },
+  { label: 'Prisma', src: '/assets/tools/prisma.svg' },
+  { label: 'Docker', src: '/assets/tools/docker.svg' },
+  { label: 'PostgreSQL', src: '/assets/tools/postgres.svg' },
+  { label: 'MongoDB', src: '/assets/tools/mongodb.svg' },
+  { label: 'shadcn/ui', src: '/assets/tools/shadcn.svg' },
+  { label: 'Tailwind UI', src: '/assets/tools/tailwindui.svg' },
+  { label: 'Bootstrap', src: '/assets/tools/bootstrap.svg' },
+  { label: 'Git', src: '/assets/tools/git.svg' },
+];
