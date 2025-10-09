@@ -20,8 +20,8 @@ export const personal = {
 
 export const socials: Social[] = [
   { label: 'GitHub', href: 'https://github.com/aadarsh214' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/username' },
-  { label: 'Email', href: 'mailto:aadarshgupta7828@gmail.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aadarsh-gupta-b6735520a/' },
+  { label: 'Email', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=aadarshgupta7828@gmail.com' },
 ];
 
 export const experience: Experience[] = [
