@@ -134,19 +134,38 @@ export const skillDescriptions = {
 
 // Logos for tools/platforms shown in Skill Wall (exclude Linux as requested)
 export const toolsLogos: ToolLogo[] = [
-  { label: 'GitHub', src: '/assets/tools/github.svg' },
-  { label: 'Cursor', src: '/assets/tools/cursor.svg' },
-  { label: 'VS Code', src: '/assets/tools/vscode.svg' },
-  { label: 'Postman', src: '/assets/tools/postman.svg' },
+  // Core skills
+  { label: 'React', src: '/assets/tools/react.svg' },
+  { label: 'TypeScript', src: '/assets/tools/typescript.svg' },
   { label: 'Next.js', src: '/assets/tools/nextjs.svg' },
-  { label: 'GenAI', src: '/assets/tools/genai.svg' },
-  { label: 'MERN', src: '/assets/tools/mern.svg' },
-  { label: 'Prisma', src: '/assets/tools/prisma.svg' },
-  { label: 'Docker', src: '/assets/tools/docker.svg' },
+  { label: 'Node.js', src: '/assets/tools/node.svg' },
+  { label: 'Express', src: '/assets/tools/express.svg' },
+  
+  
+  
+  { label: 'REST', src: '/assets/tools/rest.svg' },
   { label: 'PostgreSQL', src: '/assets/tools/postgres.svg' },
   { label: 'MongoDB', src: '/assets/tools/mongodb.svg' },
+  { label: 'Redis', src: '/assets/tools/redis.svg' },
+  { label: 'Docker', src: '/assets/tools/docker.svg' },
+  { label: 'Kubernetes', src: '/assets/tools/kubernetes.svg' },
+  { label: 'AWS', src: '/assets/tools/aws.svg' },
+  { label: 'CI/CD', src: '/assets/tools/cicd.svg' },
+  { label: 'JavaScript', src: '/assets/tools/javascript.svg' },
+  { label: 'Cloudflare', src: '/assets/tools/cloudflare.svg' },
+  { label: 'TailwindCSS', src: '/assets/tools/tailwindcss.svg' },
+  { label: 'Design Systems', src: '/assets/tools/design-systems.svg' },
+
+  // Tooling and extras (as in screenshots)
+  { label: 'Prisma', src: '/assets/tools/prisma.svg' },
+  { label: 'VS Code', src: '/assets/tools/vscode.svg' },
+  { label: 'Postman', src: '/assets/tools/postman.svg' },
+  { label: 'Git', src: '/assets/tools/git.svg' },
+  { label: 'GitHub', src: '/assets/tools/github.svg' },
+  { label: 'Cursor', src: '/assets/tools/cursor.svg' },
   { label: 'shadcn/ui', src: '/assets/tools/shadcn.svg' },
   { label: 'Tailwind UI', src: '/assets/tools/tailwindui.svg' },
   { label: 'Bootstrap', src: '/assets/tools/bootstrap.svg' },
-  { label: 'Git', src: '/assets/tools/git.svg' },
+  { label: 'GenAI', src: '/assets/tools/genai.svg' },
+  { label: 'MERN', src: '/assets/tools/mern.svg' },
 ];
