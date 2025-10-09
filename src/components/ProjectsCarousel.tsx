@@ -130,7 +130,7 @@ export default function ProjectsCarousel() {
   }, [])
 
   return (
-    <section aria-label="Projects" className="py-16">
+    <section id="projects" aria-label="Projects" className="py-16">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>

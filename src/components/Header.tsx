@@ -39,7 +39,11 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Work', path: '/work' },
+    // Work should scroll to the Projects section on the current page
+    { name: 'Work', onClick: () => {
+      const el = document.getElementById('projects');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } },
     { name: 'Skill Wall', path: '/skill-wall' },
   ] as const;
 
@@ -63,10 +67,14 @@ export default function Header() {
             {navItems.map((item) => (
               <a
                 key={item.name}
-                href={item.path}
+                href={(item as any).path ?? '#'}
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate(item.path);
+                  if ('path' in item && item.path) {
+                    navigate(item.path);
+                  } else if ('onClick' in item && item.onClick) {
+                    item.onClick();
+                  }
                 }}
                 className="text-xs md:text-sm text-zinc-300 hover:text-white transition-all duration-300"
               >
@@ -110,12 +118,16 @@ export default function Header() {
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={item.path}
+                  href={(item as any).path ?? '#'}
                   className="text-lg text-zinc-300 hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMobileMenuOpen(false);
-                    navigate(item.path);
+                    if ('path' in item && item.path) {
+                      navigate(item.path);
+                    } else if ('onClick' in item && item.onClick) {
+                      item.onClick();
+                    }
                   }}
                 >
                   {item.name}
