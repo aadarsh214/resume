@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Command, Menu } from 'lucide-react';
+import { Command } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
@@ -13,29 +13,6 @@ export default function Header() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    if (sectionId === 'testimonials') {
-      const el = document.querySelector('.animate-marquee') as HTMLElement | null;
-      if (el) {
-        const yOffset = -100;
-        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-      return;
-    }
-    if (sectionId === 'cta') {
-      const el = document.querySelector('.button-gradient') as HTMLElement | null;
-      if (el) {
-        const yOffset = -100;
-        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-      return;
-    }
-    const target = document.getElementById(sectionId);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const navItems = [
     { name: 'Home', path: '/' },
