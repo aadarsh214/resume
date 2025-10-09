@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <rect width="256" height="256" rx="56" fill="#111216"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <!-- Command-like glyph to match header icon feel -->
+  <g fill="url(#g)">
+    <rect x="56" y="56" width="56" height="56" rx="24"/>
+    <rect x="144" y="56" width="56" height="56" rx="24"/>
+    <rect x="56" y="144" width="56" height="56" rx="24"/>
+    <rect x="144" y="144" width="56" height="56" rx="24"/>
+  </g>
+  <rect x="88" y="88" width="80" height="80" rx="12" fill="#0b0f14"/>
+</svg>

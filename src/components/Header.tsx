@@ -1,77 +1,139 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Home, Grid3x3, Image } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Command, Menu } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
-  const [now, setNow] = useState<string>('');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const formatter = useMemo(() =>
-    new Intl.DateTimeFormat('en-IN', {
-      timeZone: 'Asia/Kolkata',
-      hour12: false,
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    }), []);
 
   useEffect(() => {
-    const tick = () => setNow(formatter.format(new Date()));
-    tick();
-    const t = setInterval(tick, 1000);
-    return () => clearInterval(t);
-  }, [formatter]);
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-  const navItems = [
-    { icon: Home, label: '', path: '/' },
-    { icon: Grid3x3, label: 'Work', path: '/work' },
-    { icon: Image, label: 'Skill Wall', path: '/skill-wall' },
-  ];
-
-  const isActive = (path: string) => {
-    if (path === '/') return location.pathname === '/';
-    return location.pathname.startsWith(path);
+  const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'testimonials') {
+      const el = document.querySelector('.animate-marquee') as HTMLElement | null;
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      return;
+    }
+    if (sectionId === 'cta') {
+      const el = document.querySelector('.button-gradient') as HTMLElement | null;
+      if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      return;
+    }
+    const target = document.getElementById(sectionId);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return (
-    <header className="sm:fixed sm:top-0 sm:left-0 sm:right-0 z-50 px-3 sm:px-4 py-3 sm:py-4">
-      <div className="flex max-w-7xl mx-auto items-center justify-between gap-3">
-        <div className="hidden sm:block text-xs sm:text-sm font-mono text-zinc-300">Asia/Kolkata</div>
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Work', path: '/work' },
+    { name: 'Skill Wall', path: '/skill-wall' },
+  ] as const;
 
-        <nav className="flex items-center gap-1 rounded-full px-2 py-2 backdrop-blur-md border border-white/10 bg-black/30 mx-auto sm:mx-0 overflow-x-auto whitespace-nowrap scrollbar-none">
-          {navItems.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => navigate(item.path)}
-              className={`group relative overflow-hidden flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-colors ${
-                isActive(item.path)
-                  ? 'text-white border border-white/30 bg-white/5'
-                  : 'text-zinc-300 hover:text-white border border-white/10 hover:bg-white/5'
-              }`}
-              aria-current={isActive(item.path) ? 'page' : undefined}
+  return (
+    <header
+      className={`fixed top-3.5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 rounded-full ${
+        isScrolled
+          ? 'h-14 bg-[#1B1B1B]/40 backdrop-blur-xl border border-white/10 scale-95 w-[90%] max-w-2xl'
+          : 'h-14 bg-[#1B1B1B] w-[95%] max-w-3xl'
+      }`}
+    >
+      <div className="mx-auto h-full px-6">
+        <nav className="flex items-center justify-between h-full">
+          <div className="flex items-center gap-2">
+            <Command className="w-5 h-5 text-indigo-400" />
+            <span className="hidden md:inline-block font-bold text-base">aadarsh.pro</span>
+          </div>
+
+          {/* Navigation */}
+          <div className="flex items-center gap-4 md:gap-6">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.path}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(item.path);
+                }}
+                className="text-xs md:text-sm text-zinc-300 hover:text-white transition-all duration-300"
+              >
+                {item.name}
+              </a>
+            ))}
+            <a
+              href="https://cal.com/aadarsh-gupta"
+              target="_blank"
+              rel="noreferrer"
+              className="button-gradient rounded-full px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm text-white border border-white/10 bg-white/10 hover:bg-white/15 transition-colors"
             >
-              <item.icon size={16} className="sm:size-[18px]" />
-              {item.label && (
-                <span className="text-xs sm:text-sm">
-                  {item.label}
-                </span>
-              )}
-            </button>
-          ))}
+              Book a call
+            </a>
+          </div>
+
+          {/* Mobile Navigation hamburger hidden since links are visible */}
+          <div className="hidden md:hidden" />
         </nav>
-        <div className="hidden sm:flex items-center gap-3">
-          <a
-            href="https://cal.com/aadarsh-gupta"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs sm:text-sm text-white hover:border-white/30 hover:bg-white/15 transition-colors"
-          >
-            Book a call
-          </a>
-          <span className="text-xs sm:text-sm font-mono text-zinc-300">{now}</span>
-        </div>
       </div>
+
+      {/* Mobile Sheet (disabled since inline links are visible on mobile) */}
+      {false && isMobileMenuOpen && (
+        <div className="fixed inset-0 z-[60]">
+          <div className="absolute inset-0 bg-black/60" onClick={() => setIsMobileMenuOpen(false)} />
+          <div className="absolute right-0 top-0 h-full w-72 bg-[#1B1B1B] border-l border-white/10 p-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Command className="w-5 h-5 text-indigo-400" />
+                <span className="font-bold text-base">aadarsh.pro</span>
+              </div>
+              <button
+                type="button"
+                className="rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-300 hover:bg-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Close
+              </button>
+            </div>
+            <div className="mt-8 flex flex-col gap-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  className="text-lg text-zinc-300 hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMobileMenuOpen(false);
+                    navigate(item.path);
+                  }}
+                >
+                  {item.name}
+                </a>
+              ))}
+              <a
+                className="button-gradient mt-4 inline-block rounded-full px-4 py-2 text-white border border-white/10 bg-white/10 hover:bg-white/15"
+                href="https://cal.com/aadarsh-gupta"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Book a call
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
