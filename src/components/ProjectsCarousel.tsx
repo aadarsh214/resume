@@ -12,13 +12,13 @@ export type Project = {
 }
 
 export const projects: Project[] = [
-  { title: 'AeroPay', desc: 'Fintech analytics dashboard concept', isVideo: true,  media: 'https://cdn.dribbble.com/userupload/16497156/file/original-16d9d3209c75d186b1fd3c32fc17a6d0.mp4', poster: 'https://cdn.dribbble.com/userupload/7388513/file/original-e38518d0a4fbbb06dcde27e6dfc48ddc.jpg?resize=1024x768&vertical=center', href: 'https://dribbble.com' },
-  { title: 'Nova UI',  desc: 'Design system components set',      isVideo: false, media: 'https://cdn.dribbble.com/userupload/7388513/file/original-e38518d0a4fbbb06dcde27e6dfc48ddc.jpg?resize=1024x768&vertical=center', href: 'https://dribbble.com' },
-  { title: 'Pulse',    desc: 'Healthcare app patient flow',       isVideo: false, media: 'https://cdn.dribbble.com/userupload/32863428/file/original-d758492cd5a8a566d2d4b3196b230ee1.png?resize=1024x768&vertical=center', href: 'https://dribbble.com' },
-  { title: 'Voyagr',   desc: 'Travel planner interactions',       isVideo: false, media: 'https://cdn.dribbble.com/userupload/3741889/file/original-80a2ff8e519d4523e8f3c410173585b5.png?resize=1024x768&vertical=center',  href: 'https://dribbble.com' },
-  { title: 'Kinetic',  desc: 'Motion landing visuals',            isVideo: true,  media: 'https://cdn.dribbble.com/userupload/17145843/file/original-38460505171667483589246c81f22d41.mp4', poster: 'https://cdn.dribbble.com/userupload/45095286/file/96cdbd9b7b37f57e8559f8d4e573c676.png?resize=1024x768&vertical=center', href: 'https://dribbble.com' },
+  { title: 'Monitize.club', desc: 'Create , Share and Earn Platform', isVideo: true,  media: 'https://cdn.dribbble.com/userupload/16497156/file/original-16d9d3209c75d186b1fd3c32fc17a6d0.mp4', poster: 'https://cdn.dribbble.com/userupload/7388513/file/original-e38518d0a4fbbb06dcde27e6dfc48ddc.jpg?resize=1024x768&vertical=center', href: 'https://monitize.club' },
+  { title: 'Crypto UI',  desc: 'Design system components set',      isVideo: false, media: 'https://cdn.dribbble.com/userupload/7388513/file/original-e38518d0a4fbbb06dcde27e6dfc48ddc.jpg?resize=1024x768&vertical=center', href: 'https://crypto-ui-three.vercel.app/' },
+  { title: 'Pulse',    desc: 'Healthcare app patient flow',       isVideo: false, media: 'https://cdn.dribbble.com/userupload/32863428/file/original-d758492cd5a8a566d2d4b3196b230ee1.png?resize=1024x768&vertical=center', href: 'https://cligenerator.store' },
+  { title: 'Voyagr',   desc: 'Travel planner interactions',       isVideo: false, media: 'https://cdn.dribbble.com/userupload/3741889/file/original-80a2ff8e519d4523e8f3c410173585b5.png?resize=1024x768&vertical=center',  href: 'https://agencc.vercel.app' },
+  { title: 'Kinetic',  desc: 'Motion landing visuals',            isVideo: true,  media: 'https://cdn.dribbble.com/userupload/17145843/file/original-38460505171667483589246c81f22d41.mp4', poster: 'https://cdn.dribbble.com/userupload/45095286/file/96cdbd9b7b37f57e8559f8d4e573c676.png?resize=1024x768&vertical=center', href: 'https://echocrm-ui.vercel.app/' },
   { title: 'Echo CRM', desc: 'Sales pipeline screens',            isVideo: false, media: 'https://cdn.dribbble.com/userupload/45095286/file/96cdbd9b7b37f57e8559f8d4e573c676.png?resize=1024x768&vertical=center', href: 'https://dribbble.com' },
-  { title: 'Orbit',    desc: 'Onboarding walkthrough',            isVideo: false, media: 'https://cdn.dribbble.com/userupload/45074842/file/2d5bf4d27e532e0d2b4a3eb90ff6ca83.png?resize=1024x768&vertical=center', href: 'https://dribbble.com' },
+  { title: 'Orbit',    desc: 'Onboarding walkthrough',            isVideo: false, media: 'https://cdn.dribbble.com/userupload/45074842/file/2d5bf4d27e532e0d2b4a3eb90ff6ca83.png?resize=1024x768&vertical=center', href: 'https://orbit-gray.vercel.app/' },
 ]
 
 export default function ProjectsCarousel() {
@@ -149,6 +149,9 @@ export default function ProjectsCarousel() {
             if (isMobile) return
             const el = scrollerRef.current
             if (!el) return
+            // If the initial pointer down is on a link/button, don't start drag logic
+            const target = e.target as HTMLElement
+            if (target.closest('a,button')) return
             isDraggingRef.current = true
             movedRef.current = false
             dragStartXRef.current = e.clientX
@@ -158,6 +161,9 @@ export default function ProjectsCarousel() {
             if (isMobile) return
             const el = scrollerRef.current
             if (!el) return
+            const target = e.target as HTMLElement
+            // Don't capture pointer when the press started on an interactive element
+            if (target.closest('a,button')) return
             el.setPointerCapture(e.pointerId)
           }}
           onPointerMove={(e) => {
@@ -179,11 +185,15 @@ export default function ProjectsCarousel() {
           onPointerLeave={() => { isDraggingRef.current = false }}
           onClickCapture={(e) => {
             if (isMobile) return
-            if (movedRef.current) {
+            const target = e.target as HTMLElement
+            const isInteractive = !!target.closest('a,button')
+            // Only cancel clicks that were part of a drag gesture and not on interactive elements
+            if (movedRef.current && !isInteractive) {
               e.preventDefault()
               e.stopPropagation()
-              movedRef.current = false
             }
+            // Reset moved flag on any click
+            movedRef.current = false
           }}
           onDragStart={(e) => e.preventDefault()}
           className={`relative mx-auto overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-proximity [overscroll-behavior-x:contain] ${!isMobile ? 'cursor-grab active:cursor-grabbing' : ''} select-none` }
@@ -205,8 +215,30 @@ export default function ProjectsCarousel() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const onCardClick: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    // If user clicked the inner anchor/button, let it handle navigation
+    const target = e.target as HTMLElement
+    if (target.closest('a,button')) return
+    // Open project link in new tab
+    window.open(project.href, '_blank', 'noopener,noreferrer')
+  }
+
+  const onCardKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      window.open(project.href, '_blank', 'noopener,noreferrer')
+    }
+  }
+
   return (
-    <div data-card="1" className="group relative h-[220px] w-[280px] overflow-hidden rounded-xl border border-white/10 bg-white/5 snap-start">
+    <div
+      data-card="1"
+      className="group relative h-[220px] w-[280px] overflow-hidden rounded-xl border border-white/10 bg-white/5 snap-start cursor-pointer"
+      onClick={onCardClick}
+      tabIndex={0}
+      role="link"
+      onKeyDown={onCardKeyDown}
+    >
       {project.isVideo ? (
         <video
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

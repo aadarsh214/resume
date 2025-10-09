@@ -36,7 +36,7 @@ export default function About() {
             <p className="text-zinc-300 leading-relaxed">{personal.intro}</p>
             <div className="mt-6 space-y-4">
               {experience
-                .filter((e) => e.company === 'Hitkarini Sabha Trust' || e.company.startsWith('Outlier'))
+                .filter((e) => e.company === 'Hitkarini Sabha Trust' || e.company.startsWith('Outlier') || e.company === 'Self-employed')
                 .map((item) => (
                   <div
                     key={item.company + item.role}
@@ -90,7 +90,7 @@ export default function About() {
             </div>
             <ol className="mt-4 space-y-4">
               {experience
-                .filter((e) => !(e.company === 'Hitkarini Sabha Trust' || e.company.startsWith('Outlier')))
+                .filter((e) => !(e.company === 'Hitkarini Sabha Trust' || e.company.startsWith('Outlier') || e.company === 'Self-employed'))
                 .map((item) => (
                   <li
                     key={item.role + item.company}
