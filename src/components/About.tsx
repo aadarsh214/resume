@@ -18,7 +18,7 @@ export default function About() {
     <section className="pt-16 sm:pt-24 lg:pt-32 xl:pt-36 pb-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-6 text-center">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white leading-[0.95]">
+          <h1 className="name-mobile-kodemono text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white leading-[0.95]">
             <span className="block">{personal.name.split(' ')[0]}</span>
             <span className="block">{personal.name.split(' ').slice(1).join(' ')}</span>
           </h1>
@@ -146,4 +146,5 @@ export default function About() {
       </div>
     </section>
 )}  
+
 

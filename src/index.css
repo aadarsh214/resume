@@ -57,3 +57,13 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
+/* Mobile-only Kode Mono style for the name heading */
+@media (max-width: 640px) {
+  .name-mobile-kodemono {
+    font-family: __kodeMono_2554a5, __kodeMono_Fallback_2554a5, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px; /* shift a little down on mobile */
+  }
+}
