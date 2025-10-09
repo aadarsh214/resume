@@ -17,7 +17,7 @@ export const projects: Project[] = [
   { title: 'Pulse',    desc: 'Healthcare app patient flow',       isVideo: false, media: 'https://cdn.dribbble.com/userupload/32863428/file/original-d758492cd5a8a566d2d4b3196b230ee1.png?resize=1024x768&vertical=center', href: 'https://cligenerator.store' },
   { title: 'Voyagr',   desc: 'Travel planner interactions',       isVideo: false, media: 'https://cdn.dribbble.com/userupload/3741889/file/original-80a2ff8e519d4523e8f3c410173585b5.png?resize=1024x768&vertical=center',  href: 'https://agencc.vercel.app' },
   { title: 'Kinetic',  desc: 'Motion landing visuals',            isVideo: true,  media: 'https://cdn.dribbble.com/userupload/17145843/file/original-38460505171667483589246c81f22d41.mp4', poster: 'https://cdn.dribbble.com/userupload/45095286/file/96cdbd9b7b37f57e8559f8d4e573c676.png?resize=1024x768&vertical=center', href: 'https://echocrm-ui.vercel.app/' },
-  { title: 'Echo CRM', desc: 'Sales pipeline screens',            isVideo: false, media: 'https://cdn.dribbble.com/userupload/45095286/file/96cdbd9b7b37f57e8559f8d4e573c676.png?resize=1024x768&vertical=center', href: 'https://dribbble.com' },
+  { title: 'Echo CRM', desc: 'Sales pipeline screens',            isVideo: false, media: 'https://cdn.dribbble.com/userupload/45095286/file/96cdbd9b7b37f57e8559f8d4e573c676.png?resize=1024x768&vertical=center', href: 'https://echo-crm.vercel.app' },
   { title: 'Orbit',    desc: 'Onboarding walkthrough',            isVideo: false, media: 'https://cdn.dribbble.com/userupload/45074842/file/2d5bf4d27e532e0d2b4a3eb90ff6ca83.png?resize=1024x768&vertical=center', href: 'https://orbit-gray.vercel.app/' },
 ]
 
