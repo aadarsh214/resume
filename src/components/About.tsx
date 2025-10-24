@@ -15,21 +15,37 @@ function ExternalIcon() {
 // socials removed; SocialLink component no longer needed
 export default function About() {
   return (
-    <section className="pt-16 sm:pt-24 lg:pt-32 xl:pt-36 pb-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mb-6 text-center">
-          <h1 className="name-mobile-kodemono text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white leading-[0.95]">
-            <span className="block">{personal.name.split(' ')[0]}</span>
-            <span className="block">{personal.name.split(' ').slice(1).join(' ')}</span>
-          </h1>
-          <div className="mt-4 md:mt-5 lg:mt-8 inline-block rounded-xl border border-white/20 bg-white/10 px-3 py-2 backdrop-blur-sm mx-auto">
-            <ContainerTextFlip
-              words={["Fullstack Developer", "Prompt Engineer", "AI Automation Engineer"]}
-              className="subtitle-premium font-clash-medium"
-              interval={2500}
-            />
+    <section className="pb-16">
+      <div className="relative overflow-hidden min-h-screen">
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+        >
+          <source src="/alt.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 grid place-items-center z-20 px-4 text-center">
+          <div>
+            <h1 className="name-mobile-kodemono text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white leading-[0.95]">
+              <span className="block">{personal.name.split(' ')[0]}</span>
+              <span className="block">{personal.name.split(' ').slice(1).join(' ')}</span>
+            </h1>
+            <div className="mt-4 md:mt-5 lg:mt-8 inline-block rounded-xl border border-white/20 bg-white/10 px-3 py-2 backdrop-blur-sm mx-auto">
+              <ContainerTextFlip
+                words={["Fullstack Developer", "Prompt Engineer", "AI Automation Engineer"]}
+                className="subtitle-premium font-clash-medium"
+                interval={2500}
+              />
+            </div>
           </div>
         </div>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 mt-10 sm:mt-14 lg:mt-20">
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
