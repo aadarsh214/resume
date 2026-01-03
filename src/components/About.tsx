@@ -23,7 +23,8 @@ export default function About() {
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
+          poster="/assets/hero-poster.webp"
         >
           <source src="/alt.mp4" type="video/mp4" />
         </video>
@@ -161,6 +162,6 @@ export default function About() {
         </div>
       </div>
     </section>
-)}  
-
+  )
+}  
 

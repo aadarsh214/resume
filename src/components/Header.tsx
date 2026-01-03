@@ -21,7 +21,10 @@ export default function Header() {
       const el = document.getElementById('projects');
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } },
+    { name: 'Resume', path: '/resume' },
+   
     { name: 'Skill Wall', path: '/skill-wall' },
+    { name: 'Contact', path: '/contact' },
   ] as const;
 
   return (

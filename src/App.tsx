@@ -3,6 +3,8 @@ import About from './components/About'
 import Work from './components/Work'
 import SkillWall from './components/SkillWall'
 import Footer from './components/Footer'
+import Resume from './components/Resume'
+import Contact from './components/Contact'
 import { Routes, Route } from 'react-router-dom'
 import CursorAura from './components/CursorAura'
 
@@ -14,7 +16,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/contact" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/work" element={<Work />} />
           <Route path="/skill-wall" element={<SkillWall />} />
         </Routes>
