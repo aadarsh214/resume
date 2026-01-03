@@ -1,3 +1,23 @@
 User-agent: *
 Allow: /
+
+# Content signals for search engines and AI systems
+# search    : building a search index and returning links/snippets
+# ai-input  : using content as input for real-time answers (AEO)
+# ai-train  : using content to train or fine-tune models
+Content-signal: search=yes,ai-input=yes,ai-train=no
+
+# Explicitly allow common AI answer bots to crawl for retrieval
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://aadarsh.pro/sitemap.xml
