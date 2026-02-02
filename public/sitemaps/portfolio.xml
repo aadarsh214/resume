@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://aadarsh.pro/</loc>
+    <lastmod>2026-02-02T08:36:48.054Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aadarsh.pro/resume</loc>
+    <lastmod>2026-02-02T08:36:48.054Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aadarsh.pro/work</loc>
+    <lastmod>2026-02-02T08:36:48.054Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aadarsh.pro/skill-wall</loc>
+    <lastmod>2026-02-02T08:36:48.054Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aadarsh.pro/contact</loc>
+    <lastmod>2026-02-02T08:36:48.054Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://aadarsh.pro/<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aadarsh.pro/</loc>
@@ -60,4 +63,27 @@
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-</urlset>
+</urlset></loc>
+    <lastmod>2026-02-02T08:41:32.336Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://aadarsh.pro/sitemaps/projects.xml</loc>
+    <lastmod>2026-02-02T08:41:32.336Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://aadarsh.pro/sitemaps/tutorials.xml</loc>
+    <lastmod>2026-02-02T08:41:32.336Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://aadarsh.pro/sitemaps/skills.xml</loc>
+    <lastmod>2026-02-02T08:41:32.336Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://aadarsh.pro/sitemaps/blog.xml</loc>
+    <lastmod>2026-02-02T08:41:32.336Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://aadarsh.pro/sitemaps/services.xml</loc>
+    <lastmod>2026-02-02T08:41:32.336Z</lastmod>
+  </sitemap>
+</sitemapindex>

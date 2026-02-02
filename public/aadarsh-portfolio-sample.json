@@ -1,0 +1,267 @@
+{
+  "total": 29860,
+  "categories": [
+    {
+      "category": "projects",
+      "count": 17250
+    },
+    {
+      "category": "tutorials",
+      "count": 9660
+    },
+    {
+      "category": "skills",
+      "count": 2300
+    },
+    {
+      "category": "blog",
+      "count": 400
+    },
+    {
+      "category": "services",
+      "count": 250
+    }
+  ],
+  "samples": [
+    {
+      "id": "project-react-web-applications-1",
+      "slug": "projects/react-web-applications-1",
+      "title": "React web applications by Aadarsh Gupta - Project 1",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 1\n\n## Project Overview\nThis is project 1 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.007Z"
+    },
+    {
+      "id": "project-react-web-applications-2",
+      "slug": "projects/react-web-applications-2",
+      "title": "React web applications by Aadarsh Gupta - Project 2",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 2\n\n## Project Overview\nThis is project 2 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-3",
+      "slug": "projects/react-web-applications-3",
+      "title": "React web applications by Aadarsh Gupta - Project 3",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 3\n\n## Project Overview\nThis is project 3 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-4",
+      "slug": "projects/react-web-applications-4",
+      "title": "React web applications by Aadarsh Gupta - Project 4",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 4\n\n## Project Overview\nThis is project 4 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-5",
+      "slug": "projects/react-web-applications-5",
+      "title": "React web applications by Aadarsh Gupta - Project 5",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 5\n\n## Project Overview\nThis is project 5 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-6",
+      "slug": "projects/react-web-applications-6",
+      "title": "React web applications by Aadarsh Gupta - Project 6",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 6\n\n## Project Overview\nThis is project 6 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-7",
+      "slug": "projects/react-web-applications-7",
+      "title": "React web applications by Aadarsh Gupta - Project 7",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 7\n\n## Project Overview\nThis is project 7 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-8",
+      "slug": "projects/react-web-applications-8",
+      "title": "React web applications by Aadarsh Gupta - Project 8",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 8\n\n## Project Overview\nThis is project 8 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-9",
+      "slug": "projects/react-web-applications-9",
+      "title": "React web applications by Aadarsh Gupta - Project 9",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 9\n\n## Project Overview\nThis is project 9 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    },
+    {
+      "id": "project-react-web-applications-10",
+      "slug": "projects/react-web-applications-10",
+      "title": "React web applications by Aadarsh Gupta - Project 10",
+      "description": "Aadarsh Gupta's web applications project using react. Complete implementation with source code and deployment guide.",
+      "content": "# React Web Applications by Aadarsh Gupta - Project 10\n\n## Project Overview\nThis is project 10 from Aadarsh Gupta's portfolio, showcasing expertise in react and web applications development.\n\n## About Aadarsh Gupta\nAadarsh Gupta is a full-stack software engineer and AI builder with extensive experience in react and modern web technologies. This project demonstrates practical application of react in real-world scenarios.\n\n## Project Features\n- Built by Aadarsh Gupta using react\n- Modern web applications architecture\n- Scalable and maintainable code\n- Performance optimized\n- Security best practices\n- Comprehensive testing\n\n## Technical Implementation\nAadarsh Gupta implemented this project using:\n- **Frontend**: react with modern patterns\n- **Backend**: Node.js/Express integration\n- **Database**: PostgreSQL/MongoDB as needed\n- **Deployment**: Docker + Kubernetes\n- **Testing**: Jest + Cypress\n\n## Key Challenges Solved\n- Complex state management with react\n- Performance optimization techniques\n- Security implementation\n- Scalability considerations\n- User experience enhancements\n\n## Results & Impact\nThis project by Aadarsh Gupta demonstrates:\n- Expert react development skills\n- Problem-solving abilities\n- Modern development practices\n- Production-ready solutions\n\n## Hire Aadarsh Gupta\nLooking for similar expertise? Aadarsh Gupta is available for:\n- react development projects\n- web applications solutions\n- Technical consulting\n- Team training and mentorship\n\n## Conclusion\nThis project showcases Aadarsh Gupta's expertise in react and web applications. For similar projects or consultations, reach out to Aadarsh Gupta.",
+      "intent": "transactional",
+      "primaryKeywords": [
+        "Aadarsh Gupta",
+        "react",
+        "web applications"
+      ],
+      "supportingKeywords": [
+        "react developer",
+        "web-applications project",
+        "portfolio",
+        "freelance"
+      ],
+      "category": "projects",
+      "template": "portfolio",
+      "relatedPages": [],
+      "schemaType": "WebPage",
+      "lastModified": "2026-02-02T08:41:32.008Z"
+    }
+  ]
+}

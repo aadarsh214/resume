@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://aadarsh.pro/#website",
+      "url": "https://aadarsh.pro/",
+      "name": "Aadarsh Gupta",
+      "description": "Full-stack software engineer and AI builder",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://aadarsh.pro/#organization",
+        "name": "Aadarsh Gupta",
+        "url": "https://aadarsh.pro/"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://aadarsh.pro/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aadarsh.pro/#person",
+      "name": "Aadarsh Gupta",
+      "url": "https://aadarsh.pro/",
+      "jobTitle": "Software Engineer and AI Builder",
+      "sameAs": [
+        "https://github.com/aadarsh214",
+        "https://www.linkedin.com/in/aadarsh-gupta-b6735520a/"
+      ]
+    }
+  ]
+}
